@@ -5,6 +5,7 @@ A small collection of what i am working on.
 
 Jumpy - Will jump when dead for navmesh
 Credits: byproduct
+
 SnickersBOP - will auto collect bop items like demonic runes (turn this off in party or raid)
 
 SnicksLure - is for fishing lures - proof of concept
