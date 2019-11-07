@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: Snicks
+## Author: Snicks, 2019
+## Notes: Demonic Runes and other BoP Loot
+## Version: 1
+
+Snicks.lua

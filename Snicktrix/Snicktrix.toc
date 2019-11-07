@@ -1,0 +1,7 @@
+## Interface: 11302
+## Title: Snicktrix
+## Author: Snicks, 2019
+## Notes: HP Pots, trinket, clams
+## Version: 1
+
+Snicktrix.lua
