@@ -1,2 +1,0 @@
-SnickersLure.lua
-SnickersLure.xml
