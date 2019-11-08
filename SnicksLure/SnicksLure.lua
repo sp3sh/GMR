@@ -1,35 +1,39 @@
---local UseLure = {}
-local FishingSpellID = 131474
-
+print("Lures Applicator by Snickers (published by Moose)")
 local function IsFishingRodEnchanted()
-  local hasMainHandEnchant, mainHandExpiration, mainHandCharges, _ = GetWeaponEnchantInfo()
+  local HasMainHandEnchant, _, _, _ = GetWeaponEnchantInfo()
 
-  return hasMainHandEnchant
+  return HasMainHandEnchant
 end
 
---local lure = {
---    '6530',
---    '6811',
---    '6532',
---    '7307',
---    '6533',
---}
+local openitem = {
+    [7973] = "Big-mouth Clam",
+    [5523] = "Small Barnacled Clam"
+}
 
-local frameEvent = CreateFrame('Frame')
- 
-local timer = 0
-local UPDATE_INTERVAL = 10
- 
-frameEvent:SetScript('OnUpdate', function(self, elapsed)
-    timer = timer + elapsed
-    if timer < UPDATE_INTERVAL then
-        return
-    end
-    timer = 3
-    if not IsFishingRodEnchanted() then
-    --print ('applying lure')
-    RunMacroText("/use Bright Baubles \n/use 16")
-else 
-    RunMacroText("/cast fishing")    
-    end
+local NextCheck = 0
+local CheckInterval = 10
+local ShouldRestart = false
+
+local Frame = CreateFrame('Frame') 
+Frame:SetScript("OnUpdate", function(self, elapsed)
+    if GetTime() > NextCheck then
+        NextCheck = GetTime() + CheckInterval
+        if __LB__ ~= nil then
+            if not IsFishingRodEnchanted() then
+                __LB__.Unlock(RunMacro, "Fishing")
+                ShouldRestart = true
+                print("Applying lure, fishing will restart in 10 seconds")
+            elseif ShouldRestart then
+                __LB__.Unlock(RunMacro, "Fishing2")
+                ShouldRestart = false
+                print("Fishing restarted")
+                else
+                    for Id, Name in pairs(openitem) do
+                        if GetItemCount(Id) > 0 then
+                            UseItemByName(Id)
+                        end
+                    end
+                end
+            end
+        end
 end)
