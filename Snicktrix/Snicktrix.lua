@@ -33,7 +33,7 @@ frameEvent:SetScript('OnUpdate', function(self, elapsed)
         else 
             for Id, Name in pairs(hpot) do
                 if not UnitIsDeadOrGhost("player") and HealthPercentage("player") < 45 and GetItemCount(Id) > 0 and GetItemCooldown(Id) == 0  then
-                    UseItemByName(Id)
+                    UseItemByName(Id) --if you wont pot then change to RunMacroText('/use SOME HEALING POTION') you may want to hardcode the id too but i have no idea why it wont work for all
                 else
                     for Id, Name in pairs(openitem) do
                         if GetItemCount(Id) > 0 then
