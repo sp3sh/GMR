@@ -53,8 +53,12 @@ frameEvent:SetScript('OnUpdate', function(self, elapsed)
                 else
                   if not checkFoodBuff() and not UnitIsDeadOrGhost("player") and GetItemCount(4422) > 0 and not playerHasBuff(8101) then -- should add fortitude and flask check
                     RunMacroText("/use Scroll of Stamina III")
-                end
-              end
+                    else
+                      if not checkFoodBuff() and not UnitIsDeadOrGhost("player") and GetItemCount(10306) > 0 and not playerHasBuff(12177) then -- should add fortitude and flask check
+                        RunMacroText("/use Scroll of Spirit IV")
+                      end
+                    end
+                  end
     end
 end)
 
