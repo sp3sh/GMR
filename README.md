@@ -17,3 +17,5 @@ LUABOX HAS LURES NOW - Leaving as code snip
 
 Snicktrix - is for HP pots, Trinket usage, Clam openning (also proof of concept)
 Credits:The QT
+
+SnickScroll - scroll concept, not hard could be more intuitive but it works.
