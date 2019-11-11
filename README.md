@@ -1,5 +1,7 @@
 # GMR
-GMR Addons for wow - install in wow addon folder - modify as you need
+GMR Addons for wow - install in wow addon folder - modify as you need - these are to get you thinking and easily modify.
+
+If i have done something for you and you want to show thanks please donate to BTC: 1D9Gp5UCZYHb2XRiUQ1T3VGBi2UTd3HURr - This is not required.
 
 A small collection of what i am working on.
 
