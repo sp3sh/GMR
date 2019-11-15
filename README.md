@@ -5,6 +5,9 @@ If i have done something for you and you want to show thanks please donate to BT
 
 A small collection of what i am working on.
 
+Dead
+This will stop then start GMR on death to re navigate to corpse (only needed if you have this issue)
+
 CN-ChatDecrypt
 Credits: Bubbubeet
 Shows you in your chat the english translation of common chinese wow terms
